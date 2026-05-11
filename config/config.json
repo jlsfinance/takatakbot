@@ -1,0 +1,88 @@
+{
+  "agents": {
+    "defaults": {
+      "workspace": "~/.nanobot/workspace",
+      "model": "deepseek-chat",
+      "provider": "openai",
+      "maxTokens": 1800,
+      "temperature": 0.1,
+      "maxToolIterations": 36,
+      "maxToolResultChars": 38000,
+      "stopOnToolFailure": true
+    }
+  },
+
+  "channels": {
+    "telegram": {
+      "enabled": true,
+      "token": "YOUR_TELEGRAM_BOT_TOKEN",
+      "allowFrom": ["YOUR_USER_ID"],
+      "replyToMessage": false,
+      "reactEmoji": "👀",
+      "groupPolicy": "mention",
+      "connectionPoolSize": 32,
+      "poolTimeout": 5.0,
+      "streaming": true,
+      "inlineKeyboards": false,
+      "streamEditInterval": 0.6
+    }
+  },
+
+  "providers": {
+    "openai": {
+      "apiKey": "YOUR_API_KEY",
+      "apiBase": "https://api.deepseek.com/v1"
+    }
+  },
+
+  "api": {
+    "host": "127.0.0.1",
+    "port": 8900,
+    "timeout": 120.0
+  },
+
+  "gateway": {
+    "host": "127.0.0.1",
+    "port": 18790,
+    "heartbeat": {
+      "enabled": true,
+      "intervalS": 1800,
+      "keepRecentMessages": 8
+    }
+  },
+
+  "tools": {
+    "web": {
+      "enable": true,
+      "proxy": null,
+      "userAgent": null,
+      "search": {
+        "provider": "duckduckgo",
+        "apiKey": "",
+        "baseUrl": "",
+        "maxResults": 5,
+        "timeout": 30
+      },
+      "fetch": {
+        "useJinaReader": true
+      }
+    },
+    "exec": {
+      "enable": true,
+      "timeout": 120,
+      "sandbox": "",
+      "pathAppend": "",
+      "allowedEnvKeys": []
+    },
+    "browser": {
+      "enable": true
+    },
+    "my": {
+      "enable": true,
+      "allowSet": false
+    },
+    "restrictToWorkspace": false,
+    "mcpServers": {},
+    "ssrfWhitelist": []
+  }
+}

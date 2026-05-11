@@ -10,6 +10,8 @@ AI-powered automation bot by **Poojadi (AI Didi)**.
 - Telegram assistant
 - Coding support
 - Business automation
+- Stock market analysis
+- WhatsApp messaging
 
 ## Setup
 
@@ -24,11 +26,27 @@ AI-powered automation bot by **Poojadi (AI Didi)**.
    setup.bat
    ```
 
+3. Edit `.env` file with your Telegram bot token
+
+4. Run the bot:
+   ```
+   venv\Scripts\activate
+   nanobot run
+   ```
+
 ## Requirements
 
 - Windows 10/11
 - Python 3.10+
 - Git
+
+## Configuration
+
+Edit `config/config.json` to set:
+- Telegram bot token
+- API keys
+- User permissions
+- Tool settings
 
 ## License
 
